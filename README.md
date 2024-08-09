@@ -1,14 +1,15 @@
-#            🎮 HERO 🎮
+#      🏋️‍♀️ FitFusion!
 
-## Aplicativo de demonstração de jogos:
+## Aplicativo para Organização de Treinos e Alimentação:
 
 ### Funcionalidades
 - Tela Login
-- Tela Jogos
-- Tela Contato
+- Home
+- Tela de Consulta de IMC
+- Tabelas de treino e alimentação
 
 ### Sobre
-- É um aplicativo que oferece aos usuários a oportunidade de experimentar uma variedade de jogos.
+- É um aplicativo para a organização dos usuarios, possibilitanto a organizarem seus treinos e alimentação!.
 
 ### Caso de uso
 
