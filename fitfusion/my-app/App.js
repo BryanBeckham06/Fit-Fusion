@@ -15,22 +15,22 @@ export default function App() {
         <Stack.Screen
           name="LoginForm"
           component={LoginForm}
-          options={{ title: 'Login' }}
+          options={{ title: 'Login', headerShown: false }}
         />
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ title: 'FitFusion!' }}
+          options={{ title: 'FitFusion!', headerShown: false }}
         />
         <Stack.Screen
           name="Tabela"
           component={Tabela}
-          options={{ title: 'Tabela' }}
+          options={{ title: 'Tabela', headerShown: false }}
         />
         <Stack.Screen
           name="IMC"
           component={IMC}
-          options={{ title: 'IMC' }}
+          options={{ title: 'IMC', headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

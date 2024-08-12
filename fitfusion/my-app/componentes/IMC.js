@@ -8,7 +8,7 @@ import {
  ImageBackground
 } from 'react-native';
 
-export default class App extends React.Component {
+export default class IMC extends React.Component {
   constructor(props){
     super(props)
     this.state = {altura:0,massa:0,resultado:0,resultadoText:""}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar, Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function Tabela() {
   const [isDay, setIsDay] = useState(true);
 
   const toggleDayNight = () => {

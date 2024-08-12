@@ -1,5 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground  } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import IMC from './IMC';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Tabela from './Tabela';
+
+const Tab = createBottomTabNavigator();
 
 export default function OpcaoCal({ navigation }) {
 
@@ -16,30 +22,58 @@ export default function OpcaoCal({ navigation }) {
   };
 
   return (
-  <ImageBackground source={{ uri: '../assets/img2.png' }} resizeMode='cover' style={styles.image} >
-    <View style={styles.container}>
 
-      <Text style={styles.title}>Escolha uma das opção abaixo:</Text>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: { backgroundColor: '#1E1E1E' },
+        tabBarActiveTintColor: '#007BFF',
+        tabBarInactiveTintColor: '#fff',
+        headerShown: false,
+      }}
+    >
+      <Tab.Screen
+        name="IMC" component={IMC}
+        options={{
+          tabBarLabel: 'IMC',
+          tabBarIcon: ({ color }) => (
+            <Icon name="home" type="font-awesome" color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Tabela" component={Tabela}
+        options={{
+          tabBarLabel: 'Tabela',
+          tabBarIcon: ({ color }) => (
+            <Icon name="table-view" type="font-awesome" color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+    // <ImageBackground source={{ uri: '../assets/img2.png' }} resizeMode='cover' style={styles.image} >
+    //   <View style={styles.container}>
 
-      <View style={styles.buttonContainer}>
+    //     <Text style={styles.title}>Escolha uma das opção abaixo:</Text>
 
-        <TouchableOpacity style={styles.button} onPress={goToAgeScreen}>
+    //     <View style={styles.buttonContainer}>
 
-          <Text style={styles.buttonText}>Tabelas</Text>
+    //       <TouchableOpacity style={styles.button} onPress={goToAgeScreen}>
 
-        </TouchableOpacity>
+    //         <Text style={styles.buttonText}>Tabelas</Text>
 
-        <TouchableOpacity style={styles.button} onPress={goToInterestScreen}>
+    //       </TouchableOpacity>
 
-          <Text style={styles.buttonText}>IMC</Text>
+    //       <TouchableOpacity style={styles.button} onPress={goToInterestScreen}>
 
-        </TouchableOpacity>
+    //         <Text style={styles.buttonText}>IMC</Text>
 
-      </View>
+    //       </TouchableOpacity>
 
-    </View>
+    //     </View>
 
-    </ImageBackground>
+    //   </View>
+
+    //   </ImageBackground>
 
   );
 
@@ -49,7 +83,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    
+
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -89,7 +123,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     fontWeight: 'bold',
-   
+
   },
-  
+
 });
